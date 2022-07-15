@@ -13,6 +13,18 @@ class BmiCal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        //primaryColor: Colors.red,
+        primarySwatch: Colors.teal,
+            canvasColor: Colors.black,
+        textTheme: const TextTheme(
+          headline2: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          )
+        )
+      ),
       home: HomePage(),
     );
   }
