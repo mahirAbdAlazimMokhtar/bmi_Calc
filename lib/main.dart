@@ -19,12 +19,24 @@ class BmiCal extends StatelessWidget {
             canvasColor: Colors.black,
         textTheme: const TextTheme(
           headline2: TextStyle(
-            fontSize: 25,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+          headline1: TextStyle(
+            fontSize: 35,
             fontWeight: FontWeight.bold,
             color: Colors.white,
-          )
-        )
+          ),
+          bodyText1: TextStyle(
+            fontSize: 15,
+            fontWeight: FontWeight.normal,
+            color: Colors.white,
+          ),
+
+        ),
       ),
+
       home: HomePage(),
     );
   }

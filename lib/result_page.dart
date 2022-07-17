@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class ResultPage extends StatelessWidget {
   const ResultPage(
@@ -36,16 +37,42 @@ class ResultPage extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-          child: Column(
-        children: [
-          Text('Gender: ${isMale ? 'Male' : 'Female'}',
-              style: Theme.of(context).textTheme.headline2),
-          Text('Result: ${result.toStringAsFixed(1)}',
-              style: Theme.of(context).textTheme.headline2),
-          Text('Healthiness: $resultPhrase',
-              style: Theme.of(context).textTheme.headline2),
-          Text('Age: $isAge', style: Theme.of(context).textTheme.headline2),
-        ],
+          child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Center(
+          child: Container(
+            width: double.infinity,
+            child: Card(
+
+              child: Column(
+
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/result.jpeg'),
+                  Text('Gender: ${isMale ? 'Male' : 'Female'}',
+                      style: Theme.of(context).textTheme.headline2),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text('Result: ${result.toStringAsFixed(1)}',
+                      style: Theme.of(context).textTheme.headline2),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text('Healthiness: $resultPhrase',
+                      style: Theme.of(context).textTheme.headline2),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Age: $isAge',
+                    style: Theme.of(context).textTheme.headline2,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
       )),
     );
   }
